@@ -1,0 +1,89 @@
+body {
+    text-align: center;
+}
+
+
+header {
+    height : 250px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+header img {
+   width: fit-content;
+   align-self: center;
+}
+
+ h1 {
+    font-family: 'Nerko One', cursive;
+    font-size: 35px;
+    margin: 0;
+    margin-top:20px;
+}
+
+h2 {
+    font-family: 'Nerko One', cursive;
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+form {
+    text-align: center;
+    margin: auto;
+    width: 30%;
+}
+
+.form-item {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.form-item label{
+    margin-right: 10px;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+ul li {
+    list-style: none;
+    background-color: rgb(233, 189, 173);
+    border-radius: 5px;
+    flex-basis: 20%;
+    padding: 10px;
+    margin: 5px;
+}
+
+button, #save{
+    background-color: rgb(233, 189, 173);
+    border-radius: 5px;
+    border-style: none;
+    padding: 5px;
+}
+
+button:hover, #save:hover{
+    background-color: rgb(230, 143, 112);
+}
+
+.rat-types {
+    margin: 5px;
+    padding: 5px;
+}
+
+#select-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+#select-type {
+    margin-bottom: 0px;
+}

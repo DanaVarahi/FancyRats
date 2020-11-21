@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Rats</title>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Fancy Rats</h1>
+        <img src = 'https://cdn.clipart.email/3364656e1016b4b3eda429551fd3a4b1_library-of-banner-royalty-free-stock-picture-of-whisker-black-and-_340-270.jpeg'>
+    </header>
+    <article>
+        <h2>Remember all your pet rats.</h2>
+        <h3 id='description'>Add name and select variety:</h3>
+        <form id = 'form'>
+            <div class="form-item">
+                <label for="name">Name</label>
+                <input type="text" id="name" required/>
+            </div>
+            <div class="form-item">
+                <label for="variety">Variety</label>
+                <select id="variety" required>
+                  <option value="" disabled selected></option>
+                  <option value="Capped">Capped</option>
+                  <option value="Hooded">Hooded</option>
+                  <option value="Blazed">Blazed</option>
+                </select>
+            </div> 
+            <h3 id='select-type'>Select type:</h3>
+            <div id='select-wrapper'>
+                <div class='rat-types'>
+                    <input type="radio" id="dumbo" name="type" value="Dumbo"
+                           checked>
+                    <label for="dumbo">Dumbo</label>
+                  </div>
+                  <div class='rat-types'>
+                    <input type="radio" id="standard" name="type" value="Standard">
+                    <label for="standard">Standard</label>
+                  </div>
+            </div>
+            
+            <input id ='save' type="submit" value="save"/>
+        </form>
+            <section id ='rats'>
+                <h2>Your Ratties</h2>
+                <ul id="ratList"></ul>
+            </section>
+    </article>
+</body>
+</html>
