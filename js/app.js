@@ -24,6 +24,19 @@ document.addEventListener('DOMContentLoaded', () => {
     ratName.textContent = `Name: ${event.target.name.value}`
     newRat.appendChild(ratName)
 
+    const ratAge =document.createElement('p')
+    let year = 'Year'
+    let month = 'Month'
+
+    if(event.target.age_years.value !== '1'){
+      year = 'Years'
+    }
+    if(event.target.age_months.value !== '1'){
+      month = 'Months'
+    }
+    ratAge.textContent = `Age: ${event.target.age_years.value} ${year} and ${event.target.age_months.value} ${month}`
+    newRat.appendChild(ratAge)
+
     const ratVariety = document.createElement('p')
     ratVariety.textContent =`Variety: ${event.target.variety.value}`
     newRat.appendChild(ratVariety)
