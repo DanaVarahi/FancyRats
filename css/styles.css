@@ -1,5 +1,6 @@
 body {
     text-align: center;
+    margin-left: 0px;
 }
 
 
@@ -50,10 +51,23 @@ form {
     margin-left: 10px;
 }
 
+.form-item input, select{
+    background-color: rgb(250, 211, 196);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 5px rgb(124, 122, 121);
+}
+
+.form-item input:focus {
+   background-color:  rgb(233, 189, 173);
+}
+
 ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-left: 0px;
 }
 ul li {
     list-style: none;
@@ -69,6 +83,7 @@ button, #save{
     border-radius: 5px;
     border-style: none;
     padding: 5px;
+    box-shadow: 2px 2px 5px rgb(124, 122, 121);
 }
 
 button:hover, #save:hover{
@@ -80,6 +95,11 @@ button:hover, #save:hover{
     padding: 5px;
 }
 
+.rat-item {
+    margin-left: 0px;
+    box-shadow: 2px 2px 5px rgb(124, 122, 121);
+}
+
 #select-wrapper{
     display: flex;
     justify-content: center;
@@ -87,4 +107,36 @@ button:hover, #save:hover{
 
 #select-type {
     margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 780px){
+
+#ratList {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+#ratList li {
+    width: 100%;
+}
+
+form {
+    width: 100%;
+}
+
+form label {
+    font-size: 1.3em;
+}
+
+button, #save {
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+
+.rat-item {
+    font-size: 1.3em;
+
+}
+
 }
