@@ -20,31 +20,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const ratImage = generateRat()
     newRat.appendChild(ratImage)
 
-    const ratName = document.createElement('p')
-    ratName.textContent = `Name: ${event.target.name.value}`
+    const ratName = createParagraph(`Name: ${event.target.name.value}`)
     newRat.appendChild(ratName)
 
-    const ratAge =document.createElement('p')
-    let year = 'Year'
-    let month = 'Month'
-
-    if(event.target.age_years.value !== '1'){
-      year = 'Years'
-    }
-    if(event.target.age_months.value !== '1'){
-      month = 'Months'
-    }
-    ratAge.textContent = `Age: ${event.target.age_years.value} ${year} and ${event.target.age_months.value} ${month}`
+    const ratYears = event.target.age_years.value
+    const ratMonths = event.target.age_months.value
+    const ratAge = createParagraph(createAgeString(ratYears, ratMonths))
     newRat.appendChild(ratAge)
 
-    const ratVariety = document.createElement('p')
-    ratVariety.textContent =`Variety: ${event.target.variety.value}`
+    const ratVariety = createParagraph(`Variety: ${event.target.variety.value}`)
     newRat.appendChild(ratVariety)
 
-    const ratType = document.createElement('p')
-    ratType.textContent =`Type: ${event.target.type.value}`
+    const ratType = createParagraph(`Type: ${event.target.type.value}`)
     newRat.appendChild(ratType)
-    
   }
 
 
@@ -52,6 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault()
     createRatListItem(event)
     document.querySelector('form').reset()
+  }
+
+  const createParagraph= function(text){
+    const paragraph = document.createElement('p')
+    paragraph.textContent = text
+    return paragraph
   }
 
   const addDeleteButton = function(){
@@ -74,4 +68,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const ratImage = document.createElement('img')
         ratImage.src = url
         return ratImage
+  }
+
+  const createAgeString =function(years, months){
+    let year = 'Year'
+    let month = 'Month'
+
+    if(years !== '1'){
+      year = 'Years'
+    }
+    if(months !== '1'){
+      month = 'Months'
+    }
+
+    return `Age: ${years} ${year} and ${months} ${month}`
   }
